@@ -20,6 +20,7 @@
                     Calculador de IMC
                 </h1>
 
+
                 <div class="input-box">
                     <label for="weith">Peso em KG</label>
                     <div class="input-field">
@@ -38,7 +39,7 @@
                         <span>M</span>
                     </div>
                 </div>
-
+                            
                 <button type="submit" id="calculate">
                     Calcular 
                 </button>
@@ -59,7 +60,27 @@
                         <i class="fa-duotone fa-solid fa-arrow-up-right-from-square"></i>                    </a>
                 </div>
             </div>
-     
+        </section>
+                    <div class="notifications">
+                        <div class="toast sucess">
+                            <i class="fa-solid fa-check-circle"></i>
+                            <div class="content">
+                                <div class ="title"> Sucesso </div>
+                                <span>Calculo realizado com sucesso</span>
+                            </div>
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+
+                                <div class="notificationsbuttons">
+                                    <button id="sucess">Sucesso</button>
+                                    <button id="error">Erro</button>
+                                    <button id="warning">Aviso</button>
+                                    <button id="info">Fechar</button>
+                                </div>
+
+
+
         </main>
         <script src="assets\js\script.js"></script> 
 </body>
