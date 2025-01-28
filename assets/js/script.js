@@ -1,67 +1,94 @@
+// Seletores gerais
+const notificationsContainer = document.querySelector('.notifications');
+const success = document.getElementById('success');
+const error = document.getElementById('error');
+const weightInput = document.getElementById('weight');
+const weightUnit = document.getElementById('weight-unit');
 const form = document.getElementById('form');
 
-form.addEventListener('submit', function(event) {
+// Formata automaticamente quando o usuário sai do campo
+weightInput.addEventListener('blur', function () {
+  if (this.value) {
+    this.value = parseFloat(this.value).toFixed(2); // Formata para duas casas decimais
+  }
+});
+
+// Atualiza automaticamente o valor ao mudar a unidade (kg/lbs)
+weightUnit.addEventListener('change', function () {
+  let weight = parseFloat(weightInput.value);
+  if (!weight) return; // Evita erro se o campo estiver vazio
+
+  if (this.value === 'kg') {
+    weightInput.value = (weight / 2.20462).toFixed(2);
+  } else if (this.value === 'lbs') {
+    weightInput.value = (weight * 2.20462).toFixed(2);
+  }
+});
+
+
+// Função para criar notificações
+function createToast(type, icon, title, text) {
+  const newToast = document.createElement('div');
+  newToast.className = `toast ${type}`;
+  newToast.innerHTML = `
+    <i class="${icon}"></i>
+    <div class="content">
+      <div class="title">${title}</div>
+      <span>${text}</span>
+    </div>
+    <i class="fa-solid fa-xmark" onclick="this.parentElement.remove()"></i> 
+  `;
+
+  notificationsContainer.appendChild(newToast);
+
+  setTimeout(() => {
+    newToast.remove();
+  }, 5000);
+}
+
+// Ações para cada botão
+success.onclick = () => createToast('success', 'fa-solid fa-circle-check', 'Sucesso', 'Operação concluída com sucesso!');
+error.onclick = () => createToast('error', 'fa-solid fa-circle-exclamation', 'Erro', 'Algo deu errado!');
+
+// Cálculo de IMC
+form.addEventListener('submit', function (event) {
   event.preventDefault();
 
-  const weight = parseFloat(document.getElementById('weight').value);
-  const height = parseFloat(document.getElementById('height').value) / 100; // Convertendo centímetros para metros
+  const weight = parseFloat(weightInput.value);
+  const weightUnitValue = weightUnit.value;
+  const height = parseFloat(document.getElementById('height').value);
 
-  if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
-    alert('Por favor, insira valores válidos para peso e altura.');
+  if (!weight || !height) {
+    createToast('error', 'fa-solid fa-circle-exclamation', 'Erro', 'Por favor, preencha todos os campos.');
     return;
   }
 
-  let notifications = document.querySelectorAll('.notification');
-  let success = document.getElementById('success'); 
-  let error = document.getElementById('error');
-  let warning = document.getElementById('warning');
-  let info = document.getElementById('info');
-  
-  //continuar codigo 
-
-  
-  const bmi = (weight / (height * height)).toFixed(2);
+  let weightInKg = weightUnitValue === 'lbs' ? weight * 0.453592 : weight;
+  let bmi = (weightInKg / ((height / 100) * (height / 100))).toFixed(2);
 
   const value = document.getElementById('value');
   let description = '';
-
-  value.classList.add('low');
-  value.classList.add('normal');
-  value.classList.add('high');
-  value.classList.add('very-high');
-  value.classList.add('extreme');
-  
-
   document.getElementById('infos').classList.remove('hidden');
 
   if (bmi < 18.5) {
     description = 'Abaixo do peso';
-    value.classList.add('low');
-    value.classList.remove('normal', 'high', 'very-high', 'extreme');
+    value.className = 'low';
   } else if (bmi >= 18.5 && bmi <= 24.9) {
     description = 'Peso ideal';
-    value.classList.add('normal');
-    value.classList.remove('low', 'high', 'very-high', 'extreme');
+    value.className = 'normal';
   } else if (bmi >= 25 && bmi <= 29.9) {
     description = 'Sobrepeso';
-    value.classList.add('high');
-    value.classList.remove('low', 'normal', 'very-high', 'extreme');
+    value.className = 'high';
   } else if (bmi >= 30 && bmi <= 34.9) {
     description = 'Obesidade grau 1';
-    value.classList.add('very-high');
-    value.classList.remove('low', 'normal', 'high', 'extreme');
-  } else if (bmi >= 35 && bmi <= 39.9) {
-    description = 'Obesidade grau 2';
-    value.classList.add('extreme');
-    value.classList.remove('normal', 'high', 'very-high', 'extreme');
+    value.className = 'very-high';
   } else {
-    description = 'Obesidade Mórbida';
-    value.classList.add('extreme');
-    value.classList.remove('low', 'normal', 'high', 'very-high');
+    description = 'Obesidade grau 2 ou maior';
+    value.className = 'extreme';
   }
 
   value.textContent = bmi.replace('.', ',');
   document.getElementById('description').textContent = description;
 
-  
+  createToast('success', 'fa-solid fa-circle-check', 'Sucesso', 'IMC calculado com sucesso!');
 });

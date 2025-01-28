@@ -20,13 +20,15 @@
                     Calculador de IMC
                 </h1>
 
-
                 <div class="input-box">
-                    <label for="weith">Peso em KG</label>
+                    <label for="weith">Peso</label>
                     <div class="input-field">
                         <i class="fa-solid fa-weight-scale"></i>
-                        <input type="number" id="weight" name="weight" placeholder="Digite seu peso" maxlength="4" required>
-                         <span>KG</span>
+                        <input type="number" id="weight" name="weight" placeholder="Digite seu peso" maxlength="4" onblur="formatWeight()">
+                        <select id="weight-unit">
+                            <option value="kg">kg</option>
+                            <option value="lbs">lbs</option>
+                        </select>
                         </div>
                     </div>
                 </div>
@@ -35,8 +37,7 @@
                     <label for="height">Altura em metros</label>
                     <div class="input-field">
                         <i class="fa-solid fa-ruler"></i>
-                        <input type="number" id="height" name="height" placeholder="Digite seu peso"  maxlength="3" required>
-                        <span>M</span>
+                        <input type="number" id="height" name="height" placeholder="Digite sua Altura" maxlength="3" onblur="formatHeight()">
                     </div>
                 </div>
                             
@@ -62,14 +63,13 @@
             </div>
         </section>
                     <div class="notifications">
-                        <div class="toast sucess">
-                            <i class="fa-solid fa-check-circle"></i>
-                            <div class="content">
-                                <div class ="title"> Sucesso </div>
-                                <span>Calculo realizado com sucesso</span>
-                            </div>
-                            <i class="fa-solid fa-xmark"></i>
-                        </div>
+                    </div>
+
+                    <div class ="buttons hidden">
+                        <button id="success">Sucesso</button>
+                        <button id="error">Erro</button>
+                        <button id="warning">Aviso!</button>
+                        <button id="info">Info</button>
                     </div>
 
         </main>
