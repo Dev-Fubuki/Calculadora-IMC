@@ -11,6 +11,15 @@ form.addEventListener('submit', function(event) {
     return;
   }
 
+  let notifications = document.querySelectorAll('.notification');
+  let success = document.getElementById('success'); 
+  let error = document.getElementById('error');
+  let warning = document.getElementById('warning');
+  let info = document.getElementById('info');
+  
+  //continuar codigo 
+
+  
   const bmi = (weight / (height * height)).toFixed(2);
 
   const value = document.getElementById('value');
