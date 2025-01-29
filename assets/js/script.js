@@ -1,25 +1,66 @@
 // Seletores gerais
 const notificationsContainer = document.querySelector('.notifications');
+
 const success = document.getElementById('success');
 const error = document.getElementById('error');
-const weightInput = document.getElementById('weight');
-const weightUnit = document.getElementById('weight-unit');
+
 const form = document.getElementById('form');
+const weightInput = document.getElementById('weight');
+const heightInput = document.getElementById('height');
+const SelectWeight = document.getElementById('weight-unit');
+const SelectHeight = document.getElementById('height-unit');
 
 // Formata automaticamente quando o usuário sai do campo
 weightInput.addEventListener('blur', function () {
   if (this.value) {
+
     this.value = parseFloat(this.value).toFixed(2); // Formata para duas casas decimais
+    
   }
 });
 
+heightInput.addEventListener('blur', function () {
+  if (this.value) {
+
+    this.value = parseFloat(this.value).toFixed(2); // Formata para duas casas decimais
+    
+  }
+});
+
+
+SelectHeight.addEventListener('change', function() {
+ 
+  let value = parseFloat(heightInput.value.replace(',', '.'));
+ 
+  if (isNaN(value)) {
+    console.error("Valor inválido");
+    return;
+  }
+
+  if (this.value == 'cm') {
+
+    const resultCm = (value / 0.0328).toFixed(2)
+    heightInput.value = resultCm; // Atualiza o campo com o valor formatado
+
+  }
+  else if (this.value === 'ft') {
+
+    const resultFts = (value * 0.0328084).toFixed(2)
+    heightInput.value = resultFts; // Atualiza o campo com o valor formatado
+
+  }
+});
+
+
+
 // Atualiza automaticamente o valor ao mudar a unidade (kg/lbs)
-weightUnit.addEventListener('change', function () {
-  let weight = parseFloat(weightInput.value);
+SelectWeight.addEventListener('change', function () {
+  let weight = parseFloat(weightInput.value.replace(',', '.')); // Substitui vírgula por ponto
   if (!weight) return; // Evita erro se o campo estiver vazio
+  
 
   if (this.value === 'kg') {
-    weightInput.value = (weight / 2.20462).toFixed(2);
+    weightInput.value = (weight / 2.20462).toFixed(2)
   } else if (this.value === 'lbs') {
     weightInput.value = (weight * 2.20462).toFixed(2);
   }
@@ -28,8 +69,11 @@ weightUnit.addEventListener('change', function () {
 
 // Função para criar notificações
 function createToast(type, icon, title, text) {
+
   const newToast = document.createElement('div');
+
   newToast.className = `toast ${type}`;
+  
   newToast.innerHTML = `
     <i class="${icon}"></i>
     <div class="content">
@@ -46,16 +90,12 @@ function createToast(type, icon, title, text) {
   }, 5000);
 }
 
-// Ações para cada botão
-success.onclick = () => createToast('success', 'fa-solid fa-circle-check', 'Sucesso', 'Operação concluída com sucesso!');
-error.onclick = () => createToast('error', 'fa-solid fa-circle-exclamation', 'Erro', 'Algo deu errado!');
-
 // Cálculo de IMC
 form.addEventListener('submit', function (event) {
   event.preventDefault();
 
   const weight = parseFloat(weightInput.value);
-  const weightUnitValue = weightUnit.value;
+  const SelectWeightValue = SelectWeight.value;
   const height = parseFloat(document.getElementById('height').value);
 
   if (!weight || !height) {
@@ -63,7 +103,7 @@ form.addEventListener('submit', function (event) {
     return;
   }
 
-  let weightInKg = weightUnitValue === 'lbs' ? weight * 0.453592 : weight;
+  let weightInKg = SelectWeightValue === 'lbs' ? weight * 0.453592 : weight;
   let bmi = (weightInKg / ((height / 100) * (height / 100))).toFixed(2);
 
   const value = document.getElementById('value');

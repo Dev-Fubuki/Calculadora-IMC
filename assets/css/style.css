@@ -59,6 +59,37 @@ body{
     border-radius: 10px;
 }
 
+select {
+    appearance: none; /* Remove o estilo padrão */
+    background-color: white;
+    border: 5px solid transparent; /* Cor moderna */
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #333;
+    transition: 0.3s ease-in-out;
+}
+
+/* Efeito ao passar o mouse */
+select:hover {
+    border-color: #0804e4;
+}
+
+/* Estilizando os options */
+select option {
+    background: transparent;
+    color: #333;
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* Destacando o option selecionado */
+select option:checked {
+    font-weight: bold;
+}
+
 .input-box label{
     font-size: 1.2rem;
     font-weight: 500;
@@ -88,7 +119,8 @@ body{
 }
 
 .input-field select::-ms-expand {
-    display: none;
+    display: block;
+    appearance: auto;
 }
 
 .input-field select:focus {
@@ -101,6 +133,7 @@ body{
     -webkit-appearance: none;
     margin: 0;
 }
+
 .input-field input:focus	{
     outline: none;
 }
@@ -186,7 +219,7 @@ body{
     color: #FF9800;
 }
 .very-high{
-    color: #f54814;
+    color: #d84012;
 }
 .extreme{
     color: #f70f0f;
@@ -284,22 +317,28 @@ body{
 
 @media screen and (max-width:1024px){
     #img img{
-        display: none;
+        position: fixed;
+        bottom: 0;
+        bottom: 0.01em;
+        right: 0;
+        width: 100%;
     }
-}
+
     @media screen and (max-width:500px){
         #container{
             width: 100%;
             height: 100%;
-            gap: 0;     
+            gap: 0;    
             overflow: hidden;
         }
+
         #calculator{
             width: 100%;
             height: 100%;
             border-radius: 0;
-            justify-content: center;
+            justify-content: top;
         }
+
         #result{
             flex-direction: column;
             gap: 1rem;
@@ -341,11 +380,6 @@ body{
         #bmi span:last-child{
             font-size: 0.75rem;
         }
-        #span{
-            font-size: 0.75rem;
-            text-align: center;
-            justify-content: center;
-        }
         #result{
             padding: 0.5rem 0;
         }
@@ -354,12 +388,42 @@ body{
         }
         #input-field span, .input-field i{
             font-size: 1rem;
+        }       
+
+        .notifications{
+            left: 80%;
+            right: -20%;
+            top: 25px;
+            transform: translate(-70%);
+            right: auto;
         }
-        #input-box label{
-            font-size: 1rem;
+        .toast {
+            padding: 5px;
+            width: 200px;
+            font-size: 0.8rem;
+            grid-template-columns: 50px 1fr 20px;
+        }
+        .toast i {
+            font-size: medium;
+        }
+        .toast .title {
+            font-size: 0.875rem;
+        }
+        .toast span,  .toast i:nth-child(3) {
+            font-size: 0.70rem;
+        }
+        .toast.error{
+            padding: 5px;
+            width: 200px;
+            font-size: 0.8rem;
+            grid-template-columns: 50px 1fr 20px;
         }
         
-    }
+        }
+        
+         
+        
     
 
     
+    }

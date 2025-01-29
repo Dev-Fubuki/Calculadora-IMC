@@ -1,78 +1,82 @@
-<!DOCTYPE html>
-<html lang="p-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculador de IMC</title>
-    <link rel="stylesheet" href="assets\css\style.css" alt="C:\Users\gabrm\OneDrive\Documentos\Bora Virar Jr\Projeto01-IMC\assets\css\style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Calculador de IMC</title>
-</head>
-<body>
-     <main id="container">
-        <section id="img">
-            <img src="assets\images\illustration.svg" alt="Pessoas Saudaveis">
-        </section>
-             
-        <section id="calculator">
-            <form id="form">
-                <h1 id="title">
-                    Calculador de IMC
-                </h1>
+    <!DOCTYPE html>
+    <html lang="p-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculador de IMC</title>
+        <link rel="stylesheet" href="assets\css\style.css" alt="C:\Users\gabrm\OneDrive\Documentos\Bora Virar Jr\Projeto01-IMC\assets\css\style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Calculador de IMC</title>
+    </head>
+    <body>
+        <main id="container">
+            <section id="img">
+                <img srcset="assets\images\illustration.svg" alt="Pessoas Saudaveis">
+            </section>
+                
+            <section id="calculator">
+                <form id="form">
+                    <h1 id="title">
+                        Calculador de IMC
+                    </h1>
 
-                <div class="input-box">
-                    <label for="weith">Peso</label>
-                    <div class="input-field">
-                        <i class="fa-solid fa-weight-scale"></i>
-                        <input type="number" id="weight" name="weight" placeholder="Digite seu peso" maxlength="4" onblur="formatWeight()">
-                        <select id="weight-unit">
-                            <option value="kg">kg</option>
-                            <option value="lbs">lbs</option>
-                        </select>
+                    <div class="input-box">
+                        <label for="weith">Peso</label>
+                        <div class="input-field">
+                            <i class="fa-solid fa-weight-scale"></i>
+                            <input type="number" id="weight" name="weight" placeholder="Digite seu peso" maxlength="4">
+                            <select id="weight-unit">
+                                <option value="kg">kg</option>
+                                <option value="lbs">lbs</option>
+                            </select>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="input-box">
-                    <label for="height">Altura em metros</label>
-                    <div class="input-field">
-                        <i class="fa-solid fa-ruler"></i>
-                        <input type="number" id="height" name="height" placeholder="Digite sua Altura" maxlength="3" onblur="formatHeight()">
-                    </div>
-                </div>
-                            
-                <button type="submit" id="calculate">
-                    Calcular 
-                </button>
-            </form>
-                <div id="infos" class="hidden">
-                    <div id="result">
-                        <div id="bmi"> 
-                        <span id="value"></span>
-                        <span> Seu IMC: </span>
+                    <div class="input-box">
+                        <label for="height">Altura</label>
+                        <div class="input-field">
+                            <i class="fa-solid fa-ruler"></i>
+                            <input type="number" id="height" name="height" placeholder="Digite sua Altura" maxlength="3">
+                            <select id="height-unit">
+                                <option value="cm">cm</option>
+                                <option value="ft">fts</option>
+                            </select>
                         </div>
-                        <div id="description">
-                            <span></span>
+                    </div>
+                                
+                    <button type="submit" id="calculate">
+                        Calcular 
+                    </button>
+                </form>
+                    <div id="infos" class="hidden">
+                        <div id="result">
+                            <div id="bmi"> 
+                            <span id="value"></span>
+                            <span> Seu IMC: </span>
+                            </div>
+                            <div id="description">
+                                <span></span>
+                        </div>
+                    </div>
+                    <div id="more-info">
+                        <a href="https://capital.sp.gov.br/web/saude/w/noticias/332991#:~:text=O%20%C3%8Dndice%20de%20Massa%20Corporal,o%20chamado%20%E2%80%9Cpeso%20ideal%E2%80%9D." target="_blank">
+                            Saiba mais sobre o IMC
+                            <i class="fa-duotone fa-solid fa-arrow-up-right-from-square"></i>                    </a>
                     </div>
                 </div>
-                <div id="more-info">
-                    <a href="https://capital.sp.gov.br/web/saude/w/noticias/332991#:~:text=O%20%C3%8Dndice%20de%20Massa%20Corporal,o%20chamado%20%E2%80%9Cpeso%20ideal%E2%80%9D." target="_blank">
-                        Saiba mais sobre o IMC
-                        <i class="fa-duotone fa-solid fa-arrow-up-right-from-square"></i>                    </a>
-                </div>
-            </div>
-        </section>
-                    <div class="notifications">
-                    </div>
+            </section>
+                        <div class="notifications">
+                        </div>
 
-                    <div class ="buttons hidden">
-                        <button id="success">Sucesso</button>
-                        <button id="error">Erro</button>
-                        <button id="warning">Aviso!</button>
-                        <button id="info">Info</button>
-                    </div>
+                        <div class ="buttons hidden">
+                            <button id="success">Sucesso</button>
+                            <button id="error">Erro</button>
+                            <button id="warning">Aviso!</button>
+                            <button id="info">Info</button>
+                        </div>
 
-        </main>
-        <script src="assets\js\script.js"></script> 
-</body>
-</html>
+            </main>
+            <script src="assets\js\script.js"></script> 
+    </body>
+    </html>
