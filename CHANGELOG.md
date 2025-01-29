@@ -1,7 +1,36 @@
 # 📝 **Changelog**
 
+## Versão 2.0 (Atual)
+
 ### 🔥 **Novidades e Melhorias**
 
+![Image](https://github.com/user-attachments/assets/991211ad-f040-41fc-84cf-63a428e3cf26)
+
+- **Suporte a Novas Unidades de Medida**  
+  - Agora é possível inserir o peso em **libras (lbs)** e a altura em **pés (fts)**.
+  - Conversão automática para o padrão métrico ao calcular o IMC.
+
+- **Validação de Formulário Aprimorada**  
+  - Entrada de peso agora se ajusta automaticamente: ex. `50` → `50,00 kg`.
+  - Conversão instantânea de **libras** para **quilogramas** sem necessidade de ação manual.
+    
+- **Aprimoramento para Dispositivos Móveis**  
+  - Interface completamente otimizada para celulares e tablets.
+  - 🌐 **Site mais polido**, com maior compatibilidade e acessibilidade.
+  - ![Image](https://github.com/user-attachments/assets/6e9ad8de-1107-40ba-ba8c-7d639ab446ed)
+    
+- **Nova Interface e Notificações**  
+  - Design reformulado para uma aparência mais moderna e intuitiva.
+  - Adicionadas **notificações visuais** para erros e sucessos ao inserir os dados.
+  - 📈 **Feedback imediato** em caso de valores inválidos.
+
+- **Melhoria na Experiência do Usuário**  
+  - Ajustes visuais e interativos para tornar a utilização mais fluida.
+  - Respostas dinâmicas para melhor compreensão do resultado.
+
+
+
+---
 
 
 ## **Versão 1.1 ** (Demo)
