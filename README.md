@@ -29,11 +29,12 @@ Este projeto é uma aplicação que permite aos usuários calcular seu IMC com b
     
 - **Aprimoramento para Dispositivos Móveis**  
   - Interface completamente otimizada para celulares e tablets.
-  - 🌐 **Site mais polido**, com maior compatibilidade e acessibilidade.
-  - 
+    
+  - 🌐 **Site mais polido**, com maior compatibilidade e acessibilidade:
+    
   - ![Image](https://github.com/user-attachments/assets/6e9ad8de-1107-40ba-ba8c-7d639ab446ed)
 
-  --
+
   
 - **Nova Interface e Notificações**  
   - Design reformulado para uma aparência mais moderna e intuitiva.
