@@ -16,9 +16,6 @@ Este projeto é uma aplicação que permite aos usuários calcular seu IMC com b
 
 ### 🔥 **Novidades e Melhorias**
 
-![Image](https://github.com/user-attachments/assets/991211ad-f040-41fc-84cf-63a428e3cf26)
-
-
 - **Suporte a Novas Unidades de Medida**  
   - Agora é possível inserir o peso em **libras (lbs)** e a altura em **pés (fts)**.
   - Conversão automática para o padrão métrico ao calcular o IMC.
@@ -29,13 +26,8 @@ Este projeto é uma aplicação que permite aos usuários calcular seu IMC com b
     
 - **Aprimoramento para Dispositivos Móveis**  
   - Interface completamente otimizada para celulares e tablets.
+  -  🌐 **Site mais polido**, com maior compatibilidade e acessibilidade:
     
-  - 🌐 **Site mais polido**, com maior compatibilidade e acessibilidade:
-    
-  - ![Image](https://github.com/user-attachments/assets/6e9ad8de-1107-40ba-ba8c-7d639ab446ed)
-
-
-  
 - **Nova Interface e Notificações**  
   - Design reformulado para uma aparência mais moderna e intuitiva.
   - Adicionadas **notificações visuais** para erros e sucessos ao inserir os dados.
@@ -45,12 +37,11 @@ Este projeto é uma aplicação que permite aos usuários calcular seu IMC com b
   - Ajustes visuais e interativos para tornar a utilização mais fluida.
   - Respostas dinâmicas para melhor compreensão do resultado.
 
+---
 
 ## 🎨 Visualização do Projeto  
 
 Acesse a versão funcional da Calculadora de IMC através do link abaixo:  
-
----
 
 [**Clique aqui para visualizar**](https://rawcdn.githack.com/Dev-Fubuki/Calculadora-IMC/d2160b4c52da884458e07f1a540b283039b620e8/index.html)
 
@@ -58,7 +49,13 @@ Acesse a versão funcional da Calculadora de IMC através do link abaixo:
 
 ## 📷 Captura de Tela  
 
-![Interface do Projeto](https://github.com/user-attachments/assets/f3821d54-fdc7-4795-932b-5f1ca383cc65)
+![Interface do Projeto](https://github.com/user-attachments/assets/991211ad-f040-41fc-84cf-63a428e3cf26)
+
+---
+
+## 📱 Dispositivos móveis
+    
+![Image](https://github.com/user-attachments/assets/6e9ad8de-1107-40ba-ba8c-7d639ab446ed)
 
 ---
 
