@@ -33,6 +33,9 @@
 ## **Versão 1.0** (Demo)
 
 ### 🛠️ **Primeira Versão**
+
+![Image](https://github.com/user-attachments/assets/e95af84c-2145-4cf2-ade2-3cea7b3081bf)
+
 - **Interface Inicial**  
   - Criação da interface de usuário utilizando **HTML** e **CSS** como base estrutural e estilização.
 
