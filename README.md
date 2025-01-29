@@ -12,27 +12,34 @@ Este projeto é uma aplicação que permite aos usuários calcular seu IMC com b
 
 # 📝 **Changelog**
 
-# **Versão 1.1** (Atual)
+## Versão 2.0 (Atual)
 
-- **Cálculo de IMC**  
-  - Implementação completa da lógica para calcular o Índice de Massa Corporal (IMC) utilizando JavaScript.
+### 🔥 **Novidades e Melhorias**
 
-- **Responsividade**  
-  - O site agora é totalmente responsivo, oferecendo uma experiência otimizada para dispositivos móveis e diferentes resoluções de tela.
+![Image](https://github.com/user-attachments/assets/991211ad-f040-41fc-84cf-63a428e3cf26)
 
-- **Mensagens Personalizadas**  
-  - Adicionadas mensagens específicas de acordo com a faixa de IMC:  
-    - **Abaixo do peso**  
-    - **Peso ideal**  
-    - **Sobrepeso**  
-  - As mensagens incluem feedback descritivo e são acompanhadas por cores personalizadas para facilitar a visualização.
+- **Suporte a Novas Unidades de Medida**  
+  - Agora é possível inserir o peso em **libras (lbs)** e a altura em **pés (fts)**.
+  - Conversão automática para o padrão métrico ao calcular o IMC.
 
-- **Feedback Visual**  
-  - Sistema de cores dinâmico para melhorar a experiência do usuário com base nos resultados.
+- **Validação de Formulário Aprimorada**  
+  - Entrada de peso agora se ajusta automaticamente: ex. `50` → `50,00 kg`.
+  - Conversão instantânea de **libras** para **quilogramas** sem necessidade de ação manual.
+    
+- **Aprimoramento para Dispositivos Móveis**  
+  - Interface completamente otimizada para celulares e tablets.
+  - 🌐 **Site mais polido**, com maior compatibilidade e acessibilidade.
+  - ![Image](https://github.com/user-attachments/assets/6e9ad8de-1107-40ba-ba8c-7d639ab446ed)
+    
+- **Nova Interface e Notificações**  
+  - Design reformulado para uma aparência mais moderna e intuitiva.
+  - Adicionadas **notificações visuais** para erros e sucessos ao inserir os dados.
+  - 📈 **Feedback imediato** em caso de valores inválidos.
 
-- **Efeitos Visuais**  
-  - Inclusão de animações e transições visuais suaves, tornando a interação mais agradável e moderna.
----
+- **Melhoria na Experiência do Usuário**  
+  - Ajustes visuais e interativos para tornar a utilização mais fluida.
+  - Respostas dinâmicas para melhor compreensão do resultado.
+
 
 ## 🎨 Visualização do Projeto  
 
@@ -50,8 +57,8 @@ Acesse a versão funcional da Calculadora de IMC através do link abaixo:
 ## 🚀 Tecnologias Utilizadas  
 
 - **HTML**: Estruturação da página.  
-- **CSS**: Estilização, Animaçoes da página, Interface Visual  
-- **JavaScript**: Implementação da lógica de cálculo do IMC, Resposividade
+- **CSS**: Estilização, Animaçoes da página, Interface Visual, Notificação Toast, Responsividade Mobile.
+- **JavaScript**: Implementação da lógica de cálculo do IMC, Implementação de Conversão, Implementação de Formatação Automática, Implementação da Lógica para Notificação Flutuante. 
 
 ---
 
