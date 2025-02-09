@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+
+model User {
+  id      String  @id @default(auto()) @map("_id") @db.ObjectId
+  email   String  @unique
+  name    String?
+  age     Int?    // Alterado de String? para Int? para refletir um valor numérico correto
+  weight  Float?  // Peso opcional
+  height  Float?  // Altura opcional
+  bmi     String  // Índice de Massa Corporal (pode ser calculado)
+  
+  @@map("users") // Define explicitamente o nome da coleção/tabela no banco de dados
+}
+

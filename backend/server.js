@@ -1,32 +1,29 @@
-import express from 'express'; 
+import express from 'express';
+import { PrismaClient } from '@prisma/client';
 
-const app = express()
+const prisma = new PrismaClient();
+const app = express();
+
 app.use(express.json());
 
 const user = []
 
-app.post('/senddata', (req, res) => {
-    user.push(req.body)
-
-    res.status(201).json(req.body)
-    console.log(`Status: ${res.statusCode}`, "Criado com Sucesso");
-
-
+app.post('/senddata', async (req, res) => {
+    await prisma.user.create({
+      data:{
+        email: req.body.email,
+        name:  req.body.name,
+        age:  req.body.age,
+        weight:  req.body.weight,
+        height:  req.body.height,
+        bmi:  req.body.bmi
+      }
+})
+  res.status(201).json(req.body)
 })
 
-app.get('/getdata', (req, res) => {
-    res.status(200).json(user)
-    console.log(`Status: ${res.statusCode}`, "Dados Recebidos com Sucesso");
-
-})
-
-app.listen(3000)
-
-
-
-
-//mongodb
-// dev-fubuki
-//password iX1LOaHUbDxR3dcf
-
-
+// Start the Express server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na Porta ${PORT}`);
+});
