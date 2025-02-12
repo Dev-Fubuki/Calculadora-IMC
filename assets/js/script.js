@@ -167,6 +167,11 @@ form.addEventListener('submit', function (event) {
     }
     
     createToast('success', 'fa-solid fa-circle-check', 'Sucesso', 'IMC calculado com sucesso!');
-    
-    
-});
+
+
+})
+
+function ShowRegister () {
+    const save = document.getElementById('save');
+    save.classList.remove('hidden') 
+}

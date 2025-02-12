@@ -156,7 +156,7 @@ select option:checked {
 }
 
 
-#calculate{
+.primary-btn {
     background-color: #000000;
     color: #fff;
     font-size: 1.3rem;
@@ -166,6 +166,7 @@ select option:checked {
     border-radius: 8px;
     cursor: pointer;
     transition: 0.475s;
+    width: 100%;
 }
 #calculate:hover{
     background-color: #161616 ;
@@ -202,28 +203,19 @@ select option:checked {
 #description{
     width: 16rem;
 }
-#more-info{
-    padding-top: 1.5rem;
-    border-top:  1px solid #f3f3f3e0;
-}
-
-#more-info a{
-    color: #000000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.6rem;
-    text-decoration: none;
-    transition: color 0.475s;
-}
-#more-info a:hover{
-    color: #f3f3f3e0 ;
-    font-size: 1.2rem;
-}
 
 .hidden{
     display: none;
 }  
+
+#SaveData{
+    background-color: #47525E;
+    color: #f0f0f0;
+}
+#SaveData:hover{
+    background-color: #161616 ;
+    transform: scale(1.05);
+}
 
 .low{
     color: #f70f0f;
