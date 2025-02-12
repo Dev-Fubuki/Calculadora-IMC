@@ -1,6 +1,6 @@
 # Calculadora de IMC  
 
-Calculadora de Índice de Massa Corporal (IMC) desenvolvida com foco em design responsivo, utilizando HTML, CSS e JavaScript.
+Calculadora de Índice de Massa Corporal (IMC) desenvolvida com foco em design responsivo, utilizando HTML, CSS, MongoDB e JavaScript e com o framework Prism
 
 ---
 
@@ -12,30 +12,28 @@ Este projeto é uma aplicação que permite aos usuários calcular seu IMC com b
 
 # 📝 **Changelog**
 
-## Versão 2.0 (Atual)
+## ⚙️ Versão 2.1 (Beta)
 
 ### 🔥 **Novidades e Melhorias**
 
-- **Suporte a Novas Unidades de Medida**  
-  - Agora é possível inserir o peso em **libras (lbs)** e a altura em **pés (fts)**.
-  - Conversão automática para o padrão métrico ao calcular o IMC.
+![Image](https://github.com/user-attachments/assets/9f5dce02-2eee-4a0a-abe3-6841d29a6ba2)
 
-- **Validação de Formulário Aprimorada**  
-  - Entrada de peso agora se ajusta automaticamente: ex. `50` → `50,00 kg`.
-  - Conversão instantânea de **libras** para **quilogramas** sem necessidade de ação manual.
+- 🖥️ **Integração com Backend**  
+  - Implementado o **backend** utilizando framework **Prisma** para gerenciar registros de usuários.
+  - CRUD via **PrismaStudio** adicionado (**Create, Read, Update e Delete**) para manipulação dos dados.
     
-- **Aprimoramento para Dispositivos Móveis**  
-  - Interface completamente otimizada para celulares e tablets.
-  -  🌐 **Site mais polido**, com maior compatibilidade e acessibilidade:
-    
-- **Nova Interface e Notificações**  
-  - Design reformulado para uma aparência mais moderna e intuitiva.
-  - Adicionadas **notificações visuais** para erros e sucessos ao inserir os dados.
-  - 📈 **Feedback imediato** em caso de valores inválidos.
+- 🗄️ **Banco de Dados**  
+  - Agora os registros são armazenados no **MongoDB**, garantindo persistência e maior eficiência.
+  - Estrutura otimizada para melhor desempenho e escalabilidade.
 
-- **Melhoria na Experiência do Usuário**  
-  - Ajustes visuais e interativos para tornar a utilização mais fluida.
-  - Respostas dinâmicas para melhor compreensão do resultado.
+- 🔄 **API e Métodos HTTP**  
+  - Implementados os métodos **GET, POST, PUT e DELETE** para interação com os dados.
+  - Permite que os usuários adicionem, editem e removam informações de forma dinâmica.
+
+- 🎨 **Melhorias Visuais e na Experiência do Usuário**  
+  - Ajustes no **Front-end** para uma interface mais intuitiva e responsiva.
+  - Feedback visual aprimorado para interações, garantindo melhor usabilidade.
+  - Notificações dinâmicas ao realizar ações no sistema.
 
 ---
 
