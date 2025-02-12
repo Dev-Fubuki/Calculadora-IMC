@@ -56,6 +56,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    
 }
 
 #title{
@@ -176,7 +177,6 @@ select option:checked {
     display: flex;
     gap: 2rem;
     align-items: center;
-    border-top: 1px solid #f3f3f3e0;
     padding: 0.75rem 0;
 }
 #bmi{
@@ -209,11 +209,12 @@ select option:checked {
 }  
 
 #SaveData{
-    background-color: #47525E;
+    background-color: #3885dd;
     color: #f0f0f0;
+    border: none;
 }
 #SaveData:hover{
-    background-color: #161616 ;
+    background-color: #1768c5 ;
     transform: scale(1.05);
 }
 
