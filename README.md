@@ -1,4 +1,4 @@
-# Calculadora de IMC  
+# Calculadora de IMC
 
 Calculadora de Índice de Massa Corporal (IMC) desenvolvida com foco em design responsivo, utilizando HTML, CSS, MongoDB, Prism (ORM) e JavaScript
 
@@ -18,22 +18,22 @@ Este projeto é uma aplicação que permite aos usuários calcular seu IMC com b
 
 ![Image](https://github.com/user-attachments/assets/9f5dce02-2eee-4a0a-abe3-6841d29a6ba2)
 
-- 🖥️ **Integração com Backend**  
-  - Implementado o **backend** utilizando framework **Prisma** para gerenciar registros de usuários.
-  - CRUD via **PrismaStudio** adicionado (**Create, Read, Update e Delete**) para manipulação dos dados.
-    
-- 🗄️ **Banco de Dados**  
-  - Agora os registros são armazenados no **MongoDB**, garantindo persistência e maior eficiência.
-  - Estrutura otimizada para melhor desempenho e escalabilidade.
+### 🖥️ **Integração com Backend**  
+- Implementado o **backend** utilizando framework **Prisma** para gerenciar registros de usuários.
+- CRUD via **PrismaStudio** adicionado (**Create, Read, Update e Delete**) para manipulação dos dados.
 
-- 🔄 **API e Métodos HTTP**  
-  - Implementados os métodos **GET, POST, PUT e DELETE** para interação com os dados.
-  - Permite que os usuários adicionem, editem e removam informações de forma dinâmica.
+### 🗄️ **Banco de Dados**  
+- Agora os registros são armazenados no **MongoDB**, garantindo persistência e maior eficiência.
+- Estrutura otimizada para melhor desempenho e escalabilidade.
 
-- 🎨 **Melhorias Visuais e na Experiência do Usuário**  
-  - Ajustes no **Front-end** para uma interface mais intuitiva e responsiva.
-  - Feedback visual aprimorado para interações, garantindo melhor usabilidade.
-  - Notificações dinâmicas ao realizar ações no sistema.
+### 🔄 **API e Métodos HTTP**  
+ - Implementados os métodos **GET, POST, PUT e DELETE** para interação com os dados.
+ - Permite que os usuários adicionem, editem e removam informações de forma dinâmica.
+
+### 🎨 **Melhorias Visuais e na Experiência do Usuário**  
+- Ajustes no **Front-end** para uma interface mais intuitiva e responsiva.
+- Feedback visual aprimorado para interações, garantindo melhor usabilidade.
+- Notificações dinâmicas ao realizar ações no sistema.
 
 ---
 
@@ -59,18 +59,18 @@ Acesse a versão funcional da Calculadora de IMC através do link abaixo:
 
 ## 🚀 Tecnologias Utilizadas  
 
-- **HTML**: Estruturação da página.  
-- **CSS**: Estilização, Animaçoes da página, Interface Visual, Notificação Toast, Responsividade Mobile.
-- **JavaScript**: Implementação da lógica de cálculo do IMC, Implementação de Conversão, Implementação de Formatação Automática, Implementação da Lógica para Notificação Flutuante.
-  - Implementação da lógica de cálculo do IMC.
-  - Conversão automática de unidades de medida (libras para quilogramas, pés para metros).
-  - Formatação dinâmica de entradas (ex.: ajuste automático de casas decimais).
-  -Implementação da lógica para notificações flutuantes e feedback visual em tempo real.
-- **Prisma (ORM)**:
-  - Gerenciamento e manipulação de banco de dados de forma eficiente.
-  - CRUD simplificado para registros de usuários.
-- **MongoDB**:
-  - Integração com MongoDB para armazenamento e persistência dos dados.
+##### **HTML**: Estruturação da página.  
+##### **CSS**: Estilização, Animaçoes da página, Interface Visual, Notificação Toast, Responsividade Mobile.
+##### **JavaScript**: Implementação da lógica de cálculo do IMC, Implementação de Conversão, Implementação de Formatação Automática, Implementação da Lógica para Notificação Flutuante.
+- Implementação da lógica de cálculo do IMC.
+- Conversão automática de unidades de medida (libras para quilogramas, pés para metros).
+- Formatação dinâmica de entradas (ex.: ajuste automático de casas decimais).
+-Implementação da lógica para notificações flutuantes e feedback visual em tempo real.
+##### **Prisma (ORM)**:
+- Gerenciamento e manipulação de banco de dados de forma eficiente.
+- CRUD simplificado para registros de usuários.
+##### **MongoDB**:
+- Integração com MongoDB para armazenamento e persistência dos dados.
  
 
 
