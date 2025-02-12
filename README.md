@@ -1,6 +1,6 @@
 # Calculadora de IMC  
 
-Calculadora de Índice de Massa Corporal (IMC) desenvolvida com foco em design responsivo, utilizando HTML, CSS, MongoDB e JavaScript e com o framework Prism
+Calculadora de Índice de Massa Corporal (IMC) desenvolvida com foco em design responsivo, utilizando HTML, CSS, MongoDB, Prism (ORM) e JavaScript
 
 ---
 
@@ -61,7 +61,19 @@ Acesse a versão funcional da Calculadora de IMC através do link abaixo:
 
 - **HTML**: Estruturação da página.  
 - **CSS**: Estilização, Animaçoes da página, Interface Visual, Notificação Toast, Responsividade Mobile.
-- **JavaScript**: Implementação da lógica de cálculo do IMC, Implementação de Conversão, Implementação de Formatação Automática, Implementação da Lógica para Notificação Flutuante. 
+- **JavaScript**: Implementação da lógica de cálculo do IMC, Implementação de Conversão, Implementação de Formatação Automática, Implementação da Lógica para Notificação Flutuante.
+  - Implementação da lógica de cálculo do IMC.
+  - Conversão automática de unidades de medida (libras para quilogramas, pés para metros).
+  - Formatação dinâmica de entradas (ex.: ajuste automático de casas decimais).
+  -Implementação da lógica para notificações flutuantes e feedback visual em tempo real.
+- **Prisma (ORM)**:
+  - Gerenciamento e manipulação de banco de dados de forma eficiente.
+  - CRUD simplificado para registros de usuários.
+- **MongoDB**:
+  - Integração com MongoDB para armazenamento e persistência dos dados.
+ 
+
+
 
 ---
 
