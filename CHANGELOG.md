@@ -6,22 +6,40 @@
 
 ![Image](https://github.com/user-attachments/assets/7e8577fa-8b2b-49bf-98a1-98b876d06adf)
 
-- 🖥️ **Integração com Backend**  
+#### 🖥️ **Integração com Backend**  
   - Implementado o **backend** utilizando framework **Prisma** para gerenciar registros de usuários.
   - CRUD via **PrismaStudio** adicionado (**Create, Read, Update e Delete**) para manipulação dos dados.
     
-- 🗄️ **Banco de Dados**  
+#### 🗄️ **Banco de Dados**  
   - Agora os registros são armazenados no **MongoDB**, garantindo persistência e maior eficiência.
   - Estrutura otimizada para melhor desempenho e escalabilidade.
 
-- 🔄 **API e Métodos HTTP**  
+#### 🔄 **API e Métodos HTTP**  
   - Implementados os métodos **GET, POST, PUT e DELETE** para interação com os dados.
   - Permite que os usuários adicionem, editem e removam informações de forma dinâmica.
 
-- 🎨 **Melhorias Visuais e na Experiência do Usuário**  
+#### 🎨 **Melhorias Visuais e na Experiência do Usuário**  
   - Ajustes no **Front-end** para uma interface mais intuitiva e responsiva.
   - Feedback visual aprimorado para interações, garantindo melhor usabilidade.
   - Notificações dinâmicas ao realizar ações no sistema.
+ 
+
+
+## 🛠️ **Melhorias Futuras e Funcionalidades Planejadas**
+
+#### 💾 Salvamento de Dados Calculados em Real-Time
+
+- Implementação de uma funcionalidade que permite o cálculo e o armazenamento de dados em tempo real (ex: cálculos de IMC, métricas personalizadas de desempenho).
+
+#### 🔄 Manipulação dos Registros de IMC
+
+- API otimizada para cálculos rápidos e integração com os registros de usuários, proporcionando dados sempre atualizados.
+
+#### 📱 Aprimoramentos na Versão Mobile
+
+- Refatoração do Front-end para melhorar a experiência de navegação em dispositivos móveis.
+- Implementação de design responsivo mais avançado, com layouts adaptativos e otimização para diferentes tamanhos de tela.
+- Ajustes na performance e usabilidade, incluindo animações mais suaves e organizadas
 
 ---
 
@@ -53,7 +71,7 @@
 
 ---
 
-## **Versão 1.1** (Demo)
+## **Versão 1.1** 
 
 ![Animação](https://github.com/user-attachments/assets/7d0591c6-cd95-4bf2-8dc2-5e1d889a8889)
 
