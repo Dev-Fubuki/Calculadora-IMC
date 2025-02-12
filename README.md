@@ -41,7 +41,7 @@ Este projeto é uma aplicação que permite aos usuários calcular seu IMC com b
 
 Acesse a versão funcional da Calculadora de IMC através do link abaixo:  
 
-[**Clique aqui para visualizar**](https://rawcdn.githack.com/Dev-Fubuki/Calculadora-IMC/d2160b4c52da884458e07f1a540b283039b620e8/index.html)
+[**Clique aqui para visualizar**](https://rawcdn.githack.com/Dev-Fubuki/Calculadora-IMC/d10d7b12ce0af74e82dc10d7554ef75e5e9770c2/index.html)
 
 ---
 
